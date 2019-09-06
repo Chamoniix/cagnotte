@@ -1,0 +1,19 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex-grow: 0;
+  border: 1px solid red;
+
+  app-somme {
+    height: 20%;
+  }
+
+  #partie-container {
+    height: 80%;
+    width: calc(100% + 20px);
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+}
+
