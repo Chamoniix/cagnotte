@@ -5,9 +5,15 @@ body, html {
   margin: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(#e66465, #9198e5);
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 1.1em;
   color: white;
   overflow: hidden;
+}
+
+:root {
+  --primary: #BB86FC;
+  --secondary: #03DAC5;
+  --dark-gray: #121212;
+  --light-gray: #1d1d1d;
 }

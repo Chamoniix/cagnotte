@@ -1,6 +1,10 @@
 :host {
   width: 100%;
   text-align: center;
+  background: linear-gradient(var(--secondary), var(--primary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   p {
     padding: 0;
