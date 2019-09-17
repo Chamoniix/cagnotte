@@ -4,7 +4,7 @@ import { Partie } from '../../model/partie.model';
 @Component({
   selector: 'app-partie',
   templateUrl: './partie.component.html',
-  styleUrls: ['./partie.component.css']
+  styleUrls: ['./partie.component.scss']
 })
 export class PartieComponent {
 
@@ -17,6 +17,10 @@ export class PartieComponent {
 
   public getGagnant(): string {
     return this.partie.resultats.find(r => r.position === 1).joueurDonneur.prenom;
+  }
+
+  public tooglePartie() {
+    this.deployed = !this.deployed;
   }
 
 }

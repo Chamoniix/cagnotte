@@ -1,9 +1,9 @@
-<h1>{{partie.typePartie}} <span>{{partie.date}}</span> </h1>
+<h1>{{partie.typePartie}} <span>{{partie.date}}</span> <span class="plus" (click)="tooglePartie()">+</span> </h1>
 
 <div *ngIf="deployed" class="content">
   <p> GAGNANT : {{getGagnant()}}</p>
 
-  <div *ngFor="let res of partie.resultats">
+  <div *ngFor="let res of partie.resultats" class="detail">
     <p *ngIf="res.joueurPreneur !== undefined">{{res.joueurDonneur.prenom}} -> {{res.joueurPreneur.prenom}} <span>{{res.somme}}€</span></p>
   </div>
 </div>

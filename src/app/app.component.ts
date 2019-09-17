@@ -35,7 +35,7 @@ export class AppComponent implements OnInit {
 
   private initPartie(i: number): Partie {
     return new Partie({
-        typePartie: 'POKER' + i,
+        typePartie: 'Deploisat ' + i,
         //date: moment('2019-08-26'),
         nombreJoueurs: 4,
         resultats: [
