@@ -5,7 +5,12 @@
     <p class="winner"> <img src="assets/img/crown.svg" alt="couronne"> : {{getGagnant()}}</p>
 
     <div *ngFor="let res of partie.resultats" class="detail">
-      <p *ngIf="res.joueurPreneur !== undefined">{{res.joueurDonneur.prenom}} -> {{res.joueurPreneur.prenom}} <span>{{res.somme}}€</span></p>
+      <div *ngIf="res.joueurPreneur !== undefined" class="sub-detail">
+        <div class="joueur">{{res.joueurDonneur.prenom}}</div>
+        <span>→</span> 
+        <div class="joueur">{{res.joueurPreneur.prenom}}</div>
+        <div class="somme">{{res.somme}}€</div>
+      </div>
     </div>
   </div>
 </div>
