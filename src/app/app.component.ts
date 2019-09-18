@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { Partie } from './model/partie.model';
 import { Resultat } from './model/resultat.model';
 import { Utilisateur } from './model/utilisateur.model';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'my-app',
@@ -15,7 +16,11 @@ export class AppComponent implements OnInit {
   public sommeTotale = 0;
   public parties: Partie[] = [];
   
-  constructor() {
+  constructor(private meta: Meta) {
+    this.meta.addTag({ name: 'theme-color', content: '#121212' });
+    this.meta.addTag({ name: 'msapplication-navbutton-color', content: '#121212' });
+    this.meta.addTag({ name: 'apple-mobile-web-app-status-bar-style', content: '#121212' });
+
     this.parties.push(this.initPartie(1));
     this.parties.push(this.initPartie(2));
     this.parties.push(this.initPartie(3));
