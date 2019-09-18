@@ -47,7 +47,7 @@
         width: calc(100% - 20px);
         
         &:last-child {
-          border-top: .5px solid rgba(80, 80, 80, .5);
+          border-top: .5px solid rgba(187, 134, 252, .5);
         }     
 
         .sub-detail {
@@ -56,10 +56,6 @@
           width: 100%;
           border-top: .5px solid rgba(187, 134, 252, .5);
           padding: 5px 0;
-        
-          &.z {
-            border-bottom: .5px solid rgba(255, 80, 80, .5);
-          }
                     
           .joueur {
             width: 30%;
