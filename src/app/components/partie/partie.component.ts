@@ -11,7 +11,7 @@ export class PartieComponent {
   @Input()
   public partie: Partie;
 
-  public deployed = false;
+  public deployed = true;
 
   constructor() { }
 
