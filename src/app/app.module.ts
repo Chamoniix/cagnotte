@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-
+import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component';
 import { SommeComponent } from './components/somme/somme.component';
 import { PartieComponent } from './components/partie/partie.component';
@@ -9,7 +9,7 @@ import { NewGameComponent } from './components/new-game/new-game.component';
 import { AddButtonComponent } from './components/new-game/add-button/add-button.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
+  imports:      [ BrowserModule, FormsModule, AppRoutingModule ],
   declarations: [ AppComponent, SommeComponent, PartieComponent, NewGameComponent, AddButtonComponent ],
   bootstrap:    [ AppComponent ]
 })
