@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { AppComponent } from './app.component';
 import { NewGameComponent } from './components/new-game/new-game.component'
+import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
-  { path: 'home', component: AppComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'new', component: NewGameComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];

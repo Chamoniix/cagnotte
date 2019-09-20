@@ -1,0 +1,15 @@
+<img src="assets/img/left-arrow.svg" alt="back" routerLink="/home"/>
+
+<h1>Nouvelle Partie</h1>
+
+<select id="type-select">
+    <option value="">--Choisir un type de partie--</option>
+    <option value="POKER">Poker</option>
+    <option value="TARROT">Tarrot</option>
+    <option value="QUOICHE">Quoiche</option>
+    <option value="DAME_DE_PIQUE">Dame de pique</option>
+</select>
+
+<input type="number" name="nbJoueurs" id="nb-joueurs-input">
+
+<button (click)="partieNext()">Suivant</button>

@@ -1,0 +1,9 @@
+<app-somme [sommeTotale]="sommeTotale"></app-somme>
+
+<div id="partie-container">
+  <app-partie *ngFor="let partie of parties"
+              [partie]="partie"
+  ></app-partie>
+</div>
+
+<app-add-button></app-add-button>
