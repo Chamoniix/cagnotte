@@ -11,26 +11,27 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.fr.gybels.cagnotte.cagnotte.controllers.dto.PartieDTO;
 import com.fr.gybels.cagnotte.cagnotte.model.Partie;
+import com.fr.gybels.cagnotte.cagnotte.model.Resultat;
 import com.fr.gybels.cagnotte.cagnotte.repositories.PartieRepository;
+import com.fr.gybels.cagnotte.cagnotte.repositories.ResultatRepository;
 
 @Controller
-@RequestMapping("/partie")
-public class PartieController {
+@RequestMapping("/resultat")
+public class ResultatController {
 
 	@Autowired
-	private PartieRepository partieRepository;
+	private ResultatRepository resultatRepository;
 
-	@RequestMapping(method=RequestMethod.GET)
-	public ResponseEntity getAllParties() {
-		List<Partie> parties = partieRepository.findAll();
-		PartieDTO partieDTO = new PartieDTO();
-		partieDTO.setIdPartie(parties.get(0).getIdPartie());
+	@RequestMapping(method= RequestMethod.GET)
+	public ResponseEntity getAllResultats() {
+		List<Resultat> resultats = resultatRepository.findAll();
 		try {
-			return new ResponseEntity(parties, HttpStatus.OK);
+			return new ResponseEntity(resultats, HttpStatus.OK);
 		}
 		catch (Exception e) {
 
 		}
 		return null;
 	}
+
 }
