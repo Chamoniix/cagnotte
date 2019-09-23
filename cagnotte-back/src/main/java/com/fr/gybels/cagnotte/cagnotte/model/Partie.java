@@ -18,7 +18,7 @@ public class Partie {
 	private LocalDateTime date;
 
 	@OneToMany(mappedBy="partie")
-	private Set<Resultat> resultat;
+	private Set<Resultat> resultats;
 
 	public Integer getIdPartie() {
 		return idPartie;
@@ -44,11 +44,11 @@ public class Partie {
 		this.date = date;
 	}
 
-	public Set<Resultat> getResultat() {
-		return resultat;
+	public Set<Resultat> getResultats() {
+		return resultats;
 	}
 
-	public void setResultat(Set<Resultat> resultat) {
-		this.resultat = resultat;
+	public void setResultats(Set<Resultat> resultats) {
+		this.resultats = resultats;
 	}
 }

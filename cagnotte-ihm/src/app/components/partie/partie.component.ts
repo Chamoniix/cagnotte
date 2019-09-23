@@ -16,7 +16,7 @@ export class PartieComponent {
   constructor() { }
 
   public getGagnant(): string {
-    return this.partie.resultats.find(r => r.position === 1).joueurDonneur.prenom;
+    return this.partie.resultats.find(r => r.position === 1).utilisateurDonneur.prenom;
   }
 
   public tooglePartie() {

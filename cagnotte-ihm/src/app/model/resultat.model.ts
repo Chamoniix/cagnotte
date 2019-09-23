@@ -2,18 +2,18 @@ import { assign } from 'lodash';
 import { Utilisateur } from './utilisateur.model';
 
 export interface ResultatDTO {
-  id: number;
+  idResultat: number;
   somme: number;
-  joueurDonneur: Utilisateur;
-  joueurPreneur: Utilisateur;
+  utilisateurDonneur: Utilisateur;
+  utilisateurPreneur: Utilisateur;
   position: number;
 }
 
 export class Resultat {
-  public id: number;
+  public idResultat: number;
   public somme: number;
-  public joueurDonneur: Utilisateur;
-  public joueurPreneur: Utilisateur;
+  public utilisateurDonneur: Utilisateur;
+  public utilisateurPreneur: Utilisateur;
   public position: number;
 
   constructor(resultatDTO: Partial<ResultatDTO>) {

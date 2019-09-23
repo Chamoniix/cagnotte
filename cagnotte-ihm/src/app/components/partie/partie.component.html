@@ -1,14 +1,14 @@
 <div class="partie-container">
-  <h1 (click)="tooglePartie()">{{partie.typePartie}} <span>{{partie.date}}</span> <span class="plus" [ngClass]="deployed ? 'active' : ''">&#8249;</span></h1>
+  <h1 (click)="tooglePartie()"><span>{{partie.typeJeu}}</span> <div><span class="date">{{partie.date | date: 'shortDate'}}</span> <span class="plus" [ngClass]="deployed ? 'active' : ''">&#8249;</span></div></h1>
 
   <div *ngIf="deployed" class="content">
     <p class="winner"> <img src="assets/img/crown.svg" alt="couronne"> : {{getGagnant()}}</p>
 
     <div *ngFor="let res of partie.resultats" class="detail">
-      <div *ngIf="res.joueurPreneur !== undefined" class="sub-detail">
-        <div class="joueur">{{res.joueurDonneur.prenom}}</div>
+      <div *ngIf="res.utilisateurPreneur !== undefined" class="sub-detail">
+        <div class="joueur">{{res.utilisateurDonneur.prenom}}</div>
         <span>→</span> 
-        <div class="joueur">{{res.joueurPreneur.prenom}}</div>
+        <div class="joueur">{{res.utilisateurPreneur.prenom}}</div>
         <div class="somme">{{res.somme}}€</div>
       </div>
     </div>

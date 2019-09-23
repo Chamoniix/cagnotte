@@ -9,13 +9,7 @@ import * as moment from "moment";
 })
 export class PartieFormComponent implements OnInit {
 
-  private partie: Partie = new Partie({
-    id: 10,
-    typePartie: 'POKER',
-    date: moment(),
-    resultats: undefined,
-    nombreJoueurs: 4
-  });
+  private partie: Partie;
 
   @Output()
   public eventPartieNext = new EventEmitter<Partie>();

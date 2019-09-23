@@ -11,12 +11,15 @@ import { APP_BASE_HREF } from '@angular/common';
 import { HomeComponent } from './components/home/home.component';
 import { PartieFormComponent } from './components/new-game/partie-form/partie-form.component';
 import { JoueurFormComponent } from './components/new-game/joueur-form/joueur-form.component';
+import {PartieService} from "./services/partie.service";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   imports:      [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   declarations: [
     AppComponent,
@@ -29,6 +32,9 @@ import { JoueurFormComponent } from './components/new-game/joueur-form/joueur-fo
     JoueurFormComponent
   ],
   bootstrap:    [ AppComponent ],
-  providers: [{provide: APP_BASE_HREF, useValue : '/' }]
+  providers: [
+    {provide: APP_BASE_HREF, useValue : '/' },
+    PartieService
+  ]
 })
 export class AppModule { }

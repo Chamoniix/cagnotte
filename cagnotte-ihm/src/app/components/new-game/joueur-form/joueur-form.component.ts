@@ -8,13 +8,7 @@ import {Resultat} from "../../../model/resultat.model";
 })
 export class JoueurFormComponent implements OnInit {
 
-  private resultat: Resultat = new Resultat( {
-    id: 10,
-    joueurDonneur: undefined,
-    joueurPreneur: undefined,
-    position: 1,
-    somme: 50,
-  });
+  private resultat: Resultat;
 
   @Input()
   public position: number;
