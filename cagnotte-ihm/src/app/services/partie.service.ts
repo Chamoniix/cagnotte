@@ -3,18 +3,17 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Partie } from '../model/partie.model';
 import { map } from 'rxjs/operators';
+import {Constantes} from "../constantes/constantes.model";
 
 
 @Injectable({providedIn: 'root'})
 export class PartieService {
 
-    private static URL = 'http://localhost:8081/';
-
     constructor(private http: HttpClient) {
     }
 
     public getAllParties(): Observable<Partie[]> {
-        return this.http.get(PartieService.URL + 'partie').pipe(
+        return this.http.get(Constantes.URL + 'partie').pipe(
             map((resp: Partie[]) => {
                     let parties = [];
                     resp.forEach(p => {
@@ -24,5 +23,9 @@ export class PartieService {
                 }
             )
         );
+    }
+
+    public addPartie(partie: Partie) {
+        return this.http.post(Constantes.URL + 'partie', partie);
     }
 }

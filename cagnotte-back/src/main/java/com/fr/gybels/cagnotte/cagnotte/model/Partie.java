@@ -3,7 +3,10 @@ package com.fr.gybels.cagnotte.cagnotte.model;
 import java.time.LocalDateTime;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
@@ -11,13 +14,14 @@ import javax.persistence.OneToMany;
 public class Partie {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idPartie;
 
 	private String typeJeu;
 
 	private LocalDateTime date;
 
-	@OneToMany(mappedBy="partie")
+	@OneToMany(mappedBy="partie", cascade = CascadeType.PERSIST)
 	private Set<Resultat> resultats;
 
 	public Integer getIdPartie() {

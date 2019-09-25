@@ -15,7 +15,7 @@ CREATE TABLE resultat (
     id_resultat INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     somme INT NOT NULL,
     utilisateur_donneur_fk INT UNSIGNED NOT NULL,
-    utilisateur_preneur_fk INT UNSIGNED NOT NULL,
+    utilisateur_preneur_fk INT UNSIGNED,
     position INT NOT NULL,
     partie_fk INT UNSIGNED NOT NULL,
     CONSTRAINT fk_resultat_partie

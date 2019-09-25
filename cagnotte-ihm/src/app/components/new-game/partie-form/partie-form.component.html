@@ -2,14 +2,17 @@
 
 <h1>Nouvelle Partie</h1>
 
-<select id="type-select">
-    <option value="">--Choisir un type de partie--</option>
-    <option value="POKER">Poker</option>
-    <option value="TARROT">Tarrot</option>
-    <option value="QUOICHE">Quoiche</option>
-    <option value="DAME_DE_PIQUE">Dame de pique</option>
-</select>
+<form (ngSubmit)="partieNext()" [formGroup]="partieFormGroup">
+    <select formControlName="type" id="type-select">
+        <option value="">--Choisir un type de partie--</option>
+        <option value="POKER">Poker</option>
+        <option value="TARROT">Tarrot</option>
+        <option value="QUOICHE">Quoiche</option>
+        <option value="DAME_DE_PIQUE">Dame de pique</option>
+    </select>
 
-<input type="number" name="nbJoueurs" id="nb-joueurs-input">
+    <input formControlName="nbJoueurs" type="number" name="nbJoueurs" id="nb-joueurs-input">
 
-<button (click)="partieNext()">Suivant</button>
+    <button type="submit">Suivant</button>
+
+</form>

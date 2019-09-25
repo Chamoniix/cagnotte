@@ -1,13 +1,15 @@
 package com.fr.gybels.cagnotte.cagnotte.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 
 @Entity
 public class Utilisateur {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idUtilisateur;
 
 	private String nom;

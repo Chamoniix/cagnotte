@@ -1,2 +1,17 @@
 <h1>{{position}}e joueur</h1>
-<button (click)="joueurNext()">Suivant</button>
+
+<form (ngSubmit)="joueurNext()" [formGroup]="joueurFormGroup">
+    <select formControlName="joueurDonneur">
+        <option *ngFor="let joueur of joueurs" [value]="joueur.idUtilisateur">{{joueur.prenom}}</option>
+    </select>
+    <p>Donne</p>
+
+    <input formControlName="somme" type="number" name="nbJoueurs">
+
+    <p>à</p>
+    <select formControlName="joueurPreneur">
+        <option *ngFor="let joueur of joueurs" [value]="joueur.idUtilisateur">{{joueur.prenom}}</option>
+    </select>
+    <button type="sbmit">Suivant</button>
+
+</form>

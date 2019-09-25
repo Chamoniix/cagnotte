@@ -3,6 +3,7 @@
 <ng-container *ngFor="let i of [].constructor(nbJoueurs); let index = index">
     <app-joueur-form *ngIf="joueursCrees === index"
                      (eventJoueurNext)="joueurNext($event)"
+                     [joueurs]="joueurs"
                      [position]="joueursCrees + 1"
     ></app-joueur-form>
 </ng-container>

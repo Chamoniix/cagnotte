@@ -1,6 +1,9 @@
 package com.fr.gybels.cagnotte.cagnotte.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -11,22 +14,23 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 public class Resultat {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idResultat;
 
 	private Integer somme;
 
 	private Integer position;
 
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.MERGE)
 	@JoinColumn(name = "utilisateur_donneur_fk")
 	private Utilisateur utilisateurDonneur;
 
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.MERGE)
 	@JoinColumn(name = "utilisateur_preneur_fk")
 	private Utilisateur utilisateurPreneur;
 
-	@ManyToOne
-	@JoinColumn(name="partie_fk", nullable=false)
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="partie_fk")
 	@JsonIgnore
 	private Partie partie;
 
